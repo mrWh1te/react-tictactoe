@@ -66,6 +66,8 @@ h2 {
 
   border: 2px solid #FDE4FA;
 
+  box-shadow: inset 0 0 8px 2px #fff;
+
   text-shadow:
   0 0 6px rgba(202,228,225,0.92),
   0 0 30px rgba(202,228,225,0.34),
