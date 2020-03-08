@@ -1,8 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tic Tac Toe with React
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93a01f7f-f783-4d10-95cd-46c32182e34c/deploy-status)](https://app.netlify.com/sites/react-tictactoe-demo/deploys)
 
-It's following the main [Tic-Tac-Toe tutorial](https://reactjs.org/tutorial/tutorial.html). 
+[App Demo](https://react-tictactoe-demo.netlify.com/)
+
+Follows the main [React Tic-Tac-Toe tutorial](https://reactjs.org/tutorial/tutorial.html), then  adds to it.
 
 > Learning by Doing 
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
