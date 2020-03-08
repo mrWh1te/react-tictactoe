@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It's following the main [Tic-Tac-Toe tutorial](https://reactjs.org/tutorial/tutorial.html). 
+
+> Learning by Doing 
+
 ## Available Scripts
 
 In the project directory, you can run:
