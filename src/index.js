@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 function Square(props) {
-    return (
+    let classNames = "square";
+    if (props.value === 'O') {
+        classNames += " circle";
+    }
+
+    return (    
         <button 
-            className="square" 
+            className={classNames}
             onClick={() => { props.onClick() }}
         >
             {props.value}
@@ -25,7 +30,7 @@ function Board(props) {
     }
 
     return (
-        <div>
+        <div className="container">
             <div className="board-row">
                 {renderSquare(0)}
                 {renderSquare(1)}
@@ -118,8 +123,10 @@ class Game extends React.Component {
         )
 
         let status;
+        let gameBoardClassNames = "game-board"
         if (winner) {
             status = 'Winner: ' + winner;
+            gameBoardClassNames += " winner-" + winner.toLowerCase();
         } else {
             const currentPlayer = this.state.xIsNext ? 'X' : 'O';
             status = 'Current player: ' + currentPlayer;
@@ -127,7 +134,7 @@ class Game extends React.Component {
 
         return (
             <div className="game">
-                <div className="game-board">
+                <div className={gameBoardClassNames}>
                     <Board 
                         squares={current.squares}
                         onClick={(i) => this.handleClick(i)}
