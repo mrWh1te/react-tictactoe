@@ -128,8 +128,12 @@ class Game extends React.Component {
             status = 'Winner: ' + winner;
             gameBoardClassNames += " winner-" + winner.toLowerCase();
         } else {
-            const currentPlayer = this.state.xIsNext ? 'X' : 'O';
-            status = 'Current player: ' + currentPlayer;
+            if (this.state.stepNumber === 9) {
+                status = 'Tie';
+            } else {
+                const currentPlayer = this.state.xIsNext ? 'X' : 'O';
+                status = 'Current player: ' + currentPlayer;
+            }
         }
 
         return (
