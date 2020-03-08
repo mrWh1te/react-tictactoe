@@ -1,6 +1,8 @@
 # Tic Tac Toe with React
 [![Netlify Status](https://api.netlify.com/api/v1/badges/93a01f7f-f783-4d10-95cd-46c32182e34c/deploy-status)](https://app.netlify.com/sites/react-tictactoe-demo/deploys)
 
+<img src="https://raw.githubusercontent.com/mrWh1te/Botmation/master/assets/art/banner/1556x379v2.png" alt="Botmation Crew" width="474">
+
 [App Demo](https://react-tictactoe-demo.netlify.com/)
 
 Follows the main [React Tic-Tac-Toe tutorial](https://reactjs.org/tutorial/tutorial.html), then  adds to it.
