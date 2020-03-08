@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 
 function Square(props) {
     let classNames = "square";
@@ -103,8 +103,8 @@ class Game extends React.Component {
 
         const moves = history.map((step, move) => {
             const desc = move ?
-                'Go to move #' + move : 
-                'Go to game start';
+                'Go to Move #' + move : 
+                'Go to Game Start';
             return (
                 <li key={move}>
                     <button onClick={() => this.jumpTo(move)}>
@@ -135,13 +135,14 @@ class Game extends React.Component {
         return (
             <div className="game">
                 <div className={gameBoardClassNames}>
+                    <div className="status">{ status }</div>
                     <Board 
                         squares={current.squares}
                         onClick={(i) => this.handleClick(i)}
                     />
                 </div>
                 <div className="game-info">
-                    <div>{ status }</div>
+                    <div>History</div>
                     <ol>{ moves }</ol>
                 </div>
             </div>
