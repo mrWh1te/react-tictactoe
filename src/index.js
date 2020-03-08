@@ -45,15 +45,19 @@ function Board(props) {
     );
 }
 
+const initialGameState = {
+    history: [{
+        squares: Array(9).fill(null)
+    }],
+    stepNumber: 0,
+    xIsNext: true
+}
+
 class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            history: [{
-                squares: Array(9).fill(null)
-            }],
-            stepNumber: 0,
-            xIsNext: true
+            ...initialGameState
         }
     }
 
@@ -84,6 +88,10 @@ class Game extends React.Component {
         })
     }
 
+    resetGame() {
+        this.setState({...initialGameState})
+    }
+
     render() {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
@@ -102,6 +110,14 @@ class Game extends React.Component {
                 </li>
             )
         })
+
+        moves.push(
+            <li key="last">
+                <button onClick={() => this.resetGame()}>
+                    Reset Game
+                </button>
+            </li>
+        )
 
         let status;
         if (winner) {
@@ -127,6 +143,8 @@ class Game extends React.Component {
         );
     }
 }
+
+// ======== Helpers =======================
 
 const calculateWinner = (squares) => {
     const lines = [
