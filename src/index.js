@@ -56,9 +56,7 @@ const initialGameState = {
 class Game extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            ...initialGameState
-        }
+        this.state = initialGameState;
     }
 
     handleClick(i) {

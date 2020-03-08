@@ -49,3 +49,7 @@ body {
     margin-left: 20px;
   }
   
+  .game-info ol li:last-child {
+    margin-top: 0.75rem;
+    list-style-type: none;
+  }
